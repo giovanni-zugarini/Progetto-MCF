@@ -8,7 +8,7 @@ class sensore:
         self.area = area
         self.sensibilità = sensibilità
         self.t_esposizione = t_esposizione
-        self.d_lambda = self.d_lambda
+        self.d_lambda = d_lambda
         self.rng = np.random.default_rng(seed)
 
     def sens(self, wavelength:np.ndarray):
