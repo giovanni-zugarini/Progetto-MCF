@@ -21,7 +21,7 @@ class CorpoNero:
         return self.radianza_spettrale(wavelength)/E_gamma
 
     def toa_flusso_fotoni(self, wavelength: np.ndarray):
-        return self.densità_fotoni(wavelength) * self.angolo_solido
+        return self.densità_fotoni(wavelength) * self.angolo_solido()
 #l'ultima funzione mi serve per moltiplicare D (densità di fotoni) è una grandezza specifica per angolo solido, infatti nella 
 # sua unità di misura è presente sr^-1, moltiplicando per l'angolo solido elimino la dipendenza dagli steradianti, ottenendo 
 # il flusso incidente sull'atmosfera 
