@@ -27,7 +27,7 @@ class Atmosfera:
             self._load_ozone_data(self.percorso_file_O3, self.colonna_temperatura_ozono)
 
     def _load_ozone_data(self, percorso_file: str, colonna_temp: int):
-        dati = np.loadtxt(percorso_file, comments=('#',';','*'))
+        dati = np.loadtxt(percorso_file, comments=('#',';','*', '!'))
         wavelength_m = dati[:,0] * 1e-9
         sigma_m2 = dati[:,colonna_temp] * 1e-4
         self._o3_interp = interp1d(wavelength_m, sigma_m2, kind="linear", bounds_error=False, fill_value=0.0)
